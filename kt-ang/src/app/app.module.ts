@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SideNavComponent } from './navigation/side-nav/side-nav.component';
 import { CuisinesComponent } from './cuisines/cuisines.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CuisinesService } from './services/cuisines.service';
+import { CuisineMenuComponent } from './cuisine-menu/cuisine-menu.component';
 
 
 
@@ -21,16 +24,18 @@ import { CuisinesComponent } from './cuisines/cuisines.component';
     HomeComponent,
     HeaderComponent,
     SideNavComponent,
-    CuisinesComponent
+    CuisinesComponent,
+    CuisineMenuComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CuisinesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

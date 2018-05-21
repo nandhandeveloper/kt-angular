@@ -1,0 +1,26 @@
+.hero-image {
+  width: 100%;
+  height: 400px;
+  /* background-image: url('https://res.cloudinary.com/grubhub-marketing/image/upload/f_auto,fl_lossy,q_80/v1507584540/GH_Hero_Desktop_2_zshkt2.jpg'); */
+  background-image: url('../../assets/515741052.jpg');
+  background-size: 100%;
+  position: relative;
+}
+
+
+.inner-hero-text {
+  background-color: rgba(116, 111, 89, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.inner-hero-text h1 {
+  font-size: 4rem;
+}
+

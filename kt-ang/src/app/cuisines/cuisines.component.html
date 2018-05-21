@@ -1,3 +1,16 @@
-<p>
-  cuisines works!
-</p>
+<div class="container">
+<div class="row cuisine-div ">
+  <div *ngFor="let cuisine of cuisines" class="col-sm-6 col-md-6 col-xs-12 col-lg-4 cuisine-card-div">
+      <a>
+          <mat-card class="cuisine-card">
+              <img mat-card-image src="{{cuisine.info.image}}" alt="Photo of {{cuisine.name}}">
+              <mat-card-content>
+                <h2>{{cuisine.name}}</h2>
+                <p>{{cuisine.info.description}}</p>
+                <p>Food Items: {{cuisine.info.foodItems}}</p>
+              </mat-card-content>
+            </mat-card>
+      </a>
+  </div>
+</div>
+</div>

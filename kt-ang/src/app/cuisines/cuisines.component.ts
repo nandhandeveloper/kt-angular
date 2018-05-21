@@ -1,3 +1,5 @@
+import { CuisineModel } from './../models/cuisine.model';
+import { CuisinesService } from './../services/cuisines.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CuisinesComponent implements OnInit {
 
-  constructor() { }
+  cuisines: CuisineModel[] = [] ;
+
+  constructor(private cuisinesService: CuisinesService) { }
 
   ngOnInit() {
+    this.cuisinesService.getAllCuisines()
+    .subscribe(
+      (data) => {
+        this.cuisines = data['Items'];
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }
